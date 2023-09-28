@@ -1,34 +1,49 @@
 # Usage
 
-create a directory to store the mysql stored data
+1. create a directory to store the mysql stored data.
 
-change the default volume path to point to the directory you created
+1. change the default volume path to point to the directory you created.
 
-- if you are using wsl in windows: create the directory in the wsl filesystem, else if created in the windows filesystem mysql will throw permissions errors
+   - if you are using wsl in windows: create the directory in the wsl filesystem, else if created in the windows filesystem mysql will throw permissions errors
 
-then just run:
+1. then just run:
 
-```
-docker-compose up
-```
+   ```
+   docker-compose up
+   ```
 
-follow to `localhost:80` to install wordpress in the container
+   and go to `localhost:80` to install wordpress in the container.
 
 ### To develop
 
-just edit the files in the wordpress directory, changes should be visible to the container and automaticly updated
+just edit the files in the wordpress directory, changes should be visible to the container and automaticly updated.
+
+### If you want
+
+you can change the default enviroment variables in the `dbconnection.env` file. I just copied some default values I found in the internet
 
 # Documentation links
 
-## Images documentation
-
-- https://hub.docker.com/_/php
-- https://hub.docker.com/_/mysql
-
-## Wordpress version
+### Wordpress
 
 https://wordpress.org/download/
 
 ```
 6.3.1
+```
+
+### PHP
+
+https://hub.docker.com/_/php
+
+```
+7.4.33
+```
+
+### MySQL
+
+https://hub.docker.com/_/mysql
+
+```
+5.7.43
 ```
